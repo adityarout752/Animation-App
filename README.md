@@ -1,10 +1,17 @@
 # Anime App 🎌
 
+## Video
+
+[anime](../../../anime)
 A modern Android application built with Kotlin and Jetpack Compose that displays anime series using the Jikan API. Features include offline support, video trailers, and an attractive Material Design 3 UI.
 
 ## 📱 Features
 
 - **Browse Top Anime**: View a curated list of top-rated anime series
+- **Search Anime**: Search for anime by title with real-time results
+  - Instant search as you type
+  - Clear button to reset and return to top anime
+  - Integrated search bar in home screen
 - **Detailed Information**: Access comprehensive details including:
   - Video trailers (with ExoPlayer integration)
   - Synopsis and plot information
@@ -38,6 +45,9 @@ app/
 │   ├── model/              # Domain models
 │   ├── repository/         # Repository interfaces
 │   └── usecase/            # Business logic use cases
+│       ├── GetTopAnimeUseCase.kt
+│       ├── GetAnimeDetailsUseCase.kt
+│       └── SearchAnimeUseCase.kt
 │
 ├── presentation/            # Presentation Layer
 │   ├── home/               # Home screen
@@ -99,14 +109,7 @@ app/
 
 ## 🔌 API Integration
 
-The app uses the **Jikan API v4**, an unofficial MyAnimeList API:
-
-- **Base URL**: `https://api.jikan.moe/v4/`
-- **Rate Limit**: 3 requests per second, 60 requests per minute
-- **Documentation**: https://docs.api.jikan.moe/
-
-### Key Endpoints Used
-
+The app uses the **Jikan API v4**
 
 ## 💾 Offline Support
 
@@ -122,6 +125,12 @@ The app implements a **cache-first strategy**:
 ## 🎨 UI/UX Features
 
 ### Home Screen
+- **Search Bar**: Real-time anime search with clear functionality
+  - Search icon (leading icon)
+  - Auto-clear button when text is entered
+  - Transparent Material Design 3 styling
+  - Instant filtering as you type
+  - Returns to top anime when cleared
 - **Grid Layout**: 2-column grid for efficient space usage
 - **Card Design**: Elevated cards with rounded corners
 - **Image Loading**: Smooth image loading with Coil
@@ -175,22 +184,12 @@ See `app/build.gradle.kts` for complete dependency list.
 
 
 
-## 📱 Screenshots
-
 *Add screenshots of your app here*
 
 ## 🙏 Acknowledgments
 
-- **Jikan API**: For providing free MyAnimeList data
+- **Copilot**: Took help from copilot for Making this project
 - **Material Design**: For design guidelines
 - **Android Community**: For excellent documentation and libraries
 
-## 📞 Support
-
-For issues and questions:
-- Open an issue on GitHub
-- Check Jikan API documentation
-- Review Android documentation
-
----
 
