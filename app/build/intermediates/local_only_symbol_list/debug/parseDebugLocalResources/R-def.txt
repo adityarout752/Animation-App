@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+string aired
+string anime_details
+string app_name
+string episodes
+string error_occurred
+string genres
+string loading
+string no_internet
+string rating
+string retry
+string score
+string status
+string studio
+string synopsis
+string top_anime
+style Theme.AnimeApp
+xml backup_rules
+xml data_extraction_rules

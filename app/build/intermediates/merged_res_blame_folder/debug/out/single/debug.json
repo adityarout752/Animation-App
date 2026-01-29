@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.animeapp-merged_res-69:/xml_backup_rules.xml.flat",
+        "source": "com.animeapp-main-71:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.animeapp-merged_res-69:/xml_data_extraction_rules.xml.flat",
+        "source": "com.animeapp-main-71:/xml/data_extraction_rules.xml"
+    }
+]
