@@ -2,7 +2,11 @@
 
 ## Video
 
-[anime](../../../anime)
+
+https://github.com/user-attachments/assets/ddc5b2ea-f8ae-466d-ac03-1ed34f086565
+
+
+
 A modern Android application built with Kotlin and Jetpack Compose that displays anime series using the Jikan API. Features include offline support, video trailers, and an attractive Material Design 3 UI.
 
 ## 📱 Features
