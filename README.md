@@ -187,9 +187,6 @@ User Action → ViewModel → Use Case → Repository → API/Database
 See `app/build.gradle.kts` for complete dependency list.
 
 
-
-*Add screenshots of your app here*
-
 ## 🙏 Acknowledgments
 
 - **Copilot**: Took help from copilot for Making this project
