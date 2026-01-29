@@ -24,7 +24,6 @@ class AnimeRepositoryImpl @Inject constructor(
 
     private companion object {
         const val TAG = "AnimeRepository"
-        const val CACHE_TIMEOUT = 3600000L // 1 hour
     }
 
     override fun getTopAnime(page: Int): Flow<Resource<List<Anime>>> = flow {
