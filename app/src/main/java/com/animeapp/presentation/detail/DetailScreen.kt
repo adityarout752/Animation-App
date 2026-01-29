@@ -31,8 +31,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -49,6 +47,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil.compose.AsyncImage
+import com.animeapp.presentation.components.AnimeAppBar
 import com.animeapp.presentation.components.YouTubePlayerComposable
 
 // Helper function to detect if URL is a YouTube URL
@@ -68,37 +67,32 @@ fun DetailScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(
-                title = { Text("Anime Details") },
-                navigationIcon = {
-                    IconButton(onClick = { navController.popBackStack() }) {
-                        Icon(Icons.Default.ArrowBack, "Back")
-                    }
-                },
-                actions = {
-                    if (state.anime != null) {
-                        IconButton(onClick = { viewModel.toggleFavorite() }) {
-                            Icon(
-                                imageVector = if (state.anime.isFavorite) {
-                                    Icons.Default.Favorite
-                                } else {
-                                    Icons.Default.FavoriteBorder
-                                },
-                                contentDescription = "Favorite",
-                                tint = if (state.anime.isFavorite) {
-                                    Color.Red
-                                } else {
-                                    MaterialTheme.colorScheme.onSurface
-                                }
-                            )
+            AnimeAppBar(
+                title = "Anime Details",
+                backgroundColor = MaterialTheme.colorScheme.primary,
+                titleColor = MaterialTheme.colorScheme.onPrimary,
+                navigationIcon = Icons.Default.ArrowBack,
+                onNavigationClick = { navController.popBackStack() },
+                actions = listOf(
+                    {
+                        if (state.anime != null) {
+                            IconButton(onClick = { viewModel.toggleFavorite() }) {
+                                Icon(
+                                    imageVector = if (state.anime.isFavorite) {
+                                        Icons.Default.Favorite
+                                    } else {
+                                        Icons.Default.FavoriteBorder
+                                    },
+                                    contentDescription = "Favorite",
+                                    tint = if (state.anime.isFavorite) {
+                                        Color.Red
+                                    } else {
+                                        MaterialTheme.colorScheme.onPrimary
+                                    }
+                                )
+                            }
                         }
                     }
-                },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.primary,
-                    titleContentColor = MaterialTheme.colorScheme.onPrimary,
-                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimary,
-                    actionIconContentColor = MaterialTheme.colorScheme.onPrimary
                 )
             )
         }
