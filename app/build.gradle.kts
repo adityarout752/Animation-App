@@ -104,6 +104,9 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.4.1")
     implementation("androidx.media3:media3-common:1.4.1")
 
+    /* ---------- YouTube Player ---------- */
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
+
     /* ---------- System UI ---------- */
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.34.0")
 
