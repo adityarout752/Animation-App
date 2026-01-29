@@ -12,7 +12,9 @@ local.properties
 captures/
 .externalNativeBuild/
 .cxx/
-*.aab
+git reset
+git add .gitignore
+git commit -m "Reinitialize gitignore"*.aab
 *.apk
 output-metadata.json
 
