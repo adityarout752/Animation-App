@@ -17,7 +17,7 @@ A modern Android application built with Kotlin and Jetpack Compose that displays
   - Clear button to reset and return to top anime
   - Integrated search bar in home screen
 - **Detailed Information**: Access comprehensive details including:
-  - Video trailers (with ExoPlayer integration)
+  - Video trailers 
   - Synopsis and plot information
   - Genre tags
   - Studio information
@@ -25,7 +25,7 @@ A modern Android application built with Kotlin and Jetpack Compose that displays
   - MyAnimeList scores
 - **Offline Mode**: Full offline functionality with Room database caching
 - **Favorites**: Mark anime as favorites for quick access
-- **Error Handling**: Graceful error handling with retry mechanisms
+
 - **Adaptive UI**: Beautiful Material Design 3 interface that adapts to light/dark themes
 
 ## 🏗️ Architecture
@@ -104,11 +104,6 @@ app/
 - **Gson** - JSON serialization/deserialization
 - **Room** - Local database with SQLite
 
-### Media & UI
-- **Coil** - Image loading library
-- **ExoPlayer (Media3)** - Video playback
-- **Material Icons** - Icon set
-
 
 
 ## 🔌 API Integration
@@ -142,7 +137,7 @@ The app implements a **cache-first strategy**:
 - **Gradient Overlays**: Enhanced readability on images
 
 ### Detail Screen
-- **Video Player**: Integrated ExoPlayer for trailers
+- **Video Player**: Integrated youtube player for trailers with fallback mechanism to webview 
 - **Fallback Images**: Shows poster if trailer unavailable
 - **Rich Content**: Comprehensive anime information
 - **Genre Tags**: Visual genre indicators
